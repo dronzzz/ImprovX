@@ -8,6 +8,8 @@ export enum LLMModelEnum {
   CLAUDEOPUS = 'CLAUDEOPUS',
   CLAUDESONNET = 'CLAUDESONNET',
   CLAUDEHAIKU = 'CLAUDEHAIKU',
+  GROQMIXTRAL = 'GROQMIXTRAL',
+  GROQLLAMA3 = 'GROQLLAMA3',
 }
 
 export const LLMModelType = {
@@ -18,6 +20,8 @@ export const LLMModelType = {
   CLAUDEOPUS: 'CLAUDEOPUS',
   CLAUDESONNET: 'CLAUDESONNET',
   CLAUDEHAIKU: 'CLAUDEHAIKU',
+  GROQMIXTRAL: 'GROQMIXTRAL',
+  GROQLLAMA3: 'GROQLLAMA3',
 };
 
 export enum LLMMappings {
@@ -28,6 +32,8 @@ export enum LLMMappings {
   CLAUDEOPUS = 'claude-3-opus-20240229',
   CLAUDESONNET = 'claude-3-5-sonnet-20241022',
   CLAUDEHAIKU = 'claude-3-haiku-20240307',
+  GROQMIXTRAL = 'mistral-saba-24b',
+  GROQLLAMA3 = 'llama-3.3-70b-versatile',
 }
 
 export const OpenAIModels = [
@@ -39,6 +45,10 @@ export const ClaudeModels = [
   LLMModelEnum.CLAUDEOPUS,
   LLMModelEnum.CLAUDESONNET,
   LLMModelEnum.CLAUDEHAIKU,
+];
+export const GroqModels = [
+  LLMModelEnum.GROQMIXTRAL,
+  LLMModelEnum.GROQLLAMA3,
 ];
 
 export type LLMModelType = (typeof LLMModelType)[keyof typeof LLMModelType];

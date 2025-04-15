@@ -22,6 +22,7 @@ export class SupertokensService {
       },
       supertokens: {
         connectionURI: process.env.SUPERTOKEN_CONNECTION_URI,
+        apiKey: process.env.SUPERTOKEN_API_KEY,
       },
       recipeList: recipeList(this.usersService, this.mailerService),
     });

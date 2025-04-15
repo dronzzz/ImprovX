@@ -14,6 +14,8 @@ import { PrismaService } from 'nestjs-prisma';
 import { Ollama } from 'ollama';
 import { ollama } from 'ollama-ai-provider';
 
+import { groq } from '@ai-sdk/groq';
+
 import { LoggerService } from 'modules/logger/logger.service';
 
 @Injectable()
@@ -23,12 +25,24 @@ export default class AIRequestsService {
     private prisma: PrismaService,
     private configService: ConfigService,
   ) {
+    if (this.configService.get('GROQ_API_KEY')) {
+      this.logger.info({
+        message: `GROQ_API_KEY detected. Prioritizing Groq models.`,
+        where: `AIRequestsService.constructor`,
+      });
+    } else {
+      this.logger.warn({
+        message: `GROQ_API_KEY not detected. Falling back to alternative models.`,
+        where: `AIRequestsService.constructor`,
+      });
+    }
     if (
-      !configService.get('OPENAI_API_KEY') ||
+      !configService.get('GROQ_API_KEY') &&
+      !configService.get('OPENAI_API_KEY') &&
       !configService.get('ANTHROPIC_API_KEY')
     ) {
       const ollama = new Ollama({ host: process.env['OLLAMA_HOST'] });
-      ollama.pull({ model: process.env['LOCAL_MODEL'] });
+      ollama.pull({ model: process.env['LOCAL_MODEL'] }); ``
     }
   }
 
@@ -100,13 +114,28 @@ export default class AIRequestsService {
     let modelInstance;
     let finalModel: string;
     if (
-      !this.configService.get('OPENAI_API_KEY') ||
+      !this.configService.get('GROQ_API_KEY') &&
+      !this.configService.get('OPENAI_API_KEY') &&
       !this.configService.get('ANTHROPIC_API_KEY')
     ) {
       model = null;
+    }                                                //currently hardcoding which model to use cant find where it is hard coded to use gpt-3.5-turbo
+
+    else {
+      model = 'llama-3.3-70b-versatile'
     }
 
     switch (model) {
+      case 'llama-3.3-70b-versatile':
+      case 'mistral-saba-24b':
+        finalModel = model;
+        this.logger.info({
+          message: `Sending request to Groq with model: ${finalModel}`,
+          where: `AIRequestsService.makeModelCall`,
+        });
+        modelInstance = groq(finalModel);
+        break;
+
       case 'gpt-3.5-turbo':
       case 'gpt-4-turbo':
       case 'gpt-4o':

@@ -13,6 +13,7 @@ export const config: Config = {
       websiteBasePath: '/auth',
     },
     connectionURI: process.env.SUPERTOKEN_CONNECTION_URI,
+
   },
   log: {
     level: process.env.LOG_LEVEL,

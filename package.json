@@ -21,8 +21,10 @@
   },
   "packageManager": "pnpm@10.3.0",
   "dependencies": {
-    "dotenv-cli": "^7.4.4",
+    "@ai-sdk/groq": "^1.2.3",
+    "@tegonhq/sdk": "^0.1.15",
     "date-fns": "^3.6.0",
+    "dotenv-cli": "^7.4.4",
     "react-day-picker": "^8.9.1",
     "turbo": "^2.0.9",
     "typescript": "5.4.3",

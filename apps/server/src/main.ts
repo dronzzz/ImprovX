@@ -1,3 +1,4 @@
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 import { ValidationPipe, VersioningType } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { HttpAdapterHost, NestFactory } from '@nestjs/core';
@@ -28,7 +29,7 @@ async function bootstrap() {
   app.useGlobalPipes(new ValidationPipe({}));
 
   app.use(bodyParser.json({ limit: '50mb' })); // Adjust limit as required
-
+  
   // Initiate trigger service
   const triggerService = app.get(TriggerdevService);
   triggerService.initCommonProject();

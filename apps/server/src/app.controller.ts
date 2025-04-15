@@ -10,6 +10,10 @@ export class AppController {
   getHello(): string {
     return this.appService.getHello();
   }
+  @Get('test-route')
+  testRoute() {
+    return "Test route is accessible";
+  }
 
   @Get('hello/:name')
   getHelloName(@Param('name') name: string): string {

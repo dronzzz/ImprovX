@@ -28,6 +28,7 @@ import {
 import { SubIssueSelectorNI } from './sub-issue-selector-ni';
 import { TeamDropdown } from './team-dropdown';
 import { AddIssueMetadata } from '../components/add-issue-metadata';
+import { IssueLabelSuggestion } from './issue-label-suggestion';
 
 interface NewIssueFormProps {
   // Used in subissue workflow
@@ -165,6 +166,11 @@ export const NewIssueForm = observer(
             }}
           />
 
+          <div className="bg-grayAlpha-100 rounded p-1 w-full flex flex-wrap gap-1 items-center">
+
+          <IssueLabelSuggestion form={form} index={index} />
+
+          </div>
           <div className="bg-grayAlpha-100 rounded p-1 w-full flex flex-wrap gap-1 items-center">
             {isTemplate && (
               <TeamDropdown

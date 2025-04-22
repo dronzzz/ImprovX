@@ -20,6 +20,14 @@ function createAxiosInstance(token: string) {
         : `http://host.docker.internal:3000${axiosConfig.url}`;
     }
 
+    if (axiosConfig.url.startsWith('/v1')) {
+      axiosConfig.url = process.env.BASE_HOST
+        ? `${process.env.BASE_HOST}/api${axiosConfig.url}`
+        : `http://host.docker.internal:3000${axiosConfig.url}`;
+
+        console.log("checking axiosurl v1",axiosConfig.url)
+    }
+
     if (!axiosConfig.headers.Authorization) {
       if (token) {
         axiosConfig.headers.Authorization = `Bearer ${token}`;

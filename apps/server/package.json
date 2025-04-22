@@ -21,7 +21,8 @@
     "build": "prisma generate && nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
-    "dev": "nest start --watch",
+    "dev": "nest start",
+  
     "start-prod": "pnpm run migrate:deploy && pnpm run generate && node dist/src/main",
     "start-prod-with-prisma": "pnpm run start-prod && pnpm prisma:studio",
     "start:debug": "nest start --debug --watch",
@@ -61,7 +62,7 @@
     "@paciolan/remote-module-loader": "^3.0.3",
     "@prisma/client": "^5.17.0",
     "@prisma/instrumentation": "^5.17.0",
-    "@tegonhq/sdk": "workspace:*",
+    "@tegonhq/sdk": "0.1.15",
     "@tegonhq/types": "workspace:*",
     "@tiptap/core": "^2.11.5",
     "@tiptap/extension-blockquote": "^2.11.5",

@@ -255,7 +255,8 @@ export async function getFilesBuffer(
 
       await new Promise((resolve, reject) => {
         response.data.pipe(writeStream);
-        writeStream.on('finish', resolve);
+        // writeStream.on('finish', resolve);           //from this 
+        writeStream.on('finish', () => resolve(true));     //to this 
         writeStream.on('error', reject);
       });
 

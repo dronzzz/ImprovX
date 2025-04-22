@@ -34,7 +34,7 @@ export const recipeList = (
         olderCookieDomain: '',
         cookieSecure: true,
       }
-    : {};
+    : {cookieSecure: true};
 
   return [
     jwt.init(),

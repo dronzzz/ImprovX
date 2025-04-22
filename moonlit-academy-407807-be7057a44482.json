@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "moonlit-academy-407807",
+  "private_key_id": "be7057a44482e086e983b6e975bb248175305e22",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCWUEtpi38F9QQY\nBHj6ywvAPQUU3VrHOComWeHJGwRaeGTDNMYnLzwEyup2BHP8wBVmx4H2ojrAUTyM\n5IeQG4bFw6U4IZ+wtJwTlJ0GrMD3PlLiTc6XtTHf9nQmJz5zILyl2q2fwWJaaylO\nkEyVZwafd0KDJbhklIDRSFoMPc9aV2WARjL6GpAIZOQglJvaZrDk/npvsqYrmBsb\n9HzN2l8jO7wmQT0PzZNLvfH7WsHqSIJ8viDhFsH6UeQYbRgnNZtHl3bHK5O+/kKJ\ndW1dirptPF/l6krrScRxxAGTkNbUMl66SL36Q8aaMI1dy/y5/onBmFUpYnQGrQ6U\nUYPyj9+3AgMBAAECggEAEmRixdhWw5DWXmX1s6IynuQYghQPrn610Zl/4g6XOsau\ndaA4esTx0BhQFf63fn62X6wbv+Tb0XpfMVIpMD3eAMbOqY6brpB65H5ztERhHB+Z\nHq2skK2QG7pZPe3hW07vJlAanIiaEzw3grBvXnyLt+lszwVHia8OEA2NTyAlBgWp\nmI47xLIEqdmpidJDPiui+R6mc8h1+u6TFNRVIZR/6NcbIlnabtULmsICjFeUHVcx\n5ApLN5eaC8DquhF5C7EOP7XNtV0oP0UQl71LEKrqdww9AOiuSqxwXTcSJz4CoI+B\nWDb79CvJOLv+LpUL5sNkHU5cEePA3KbJWVM2mZB9eQKBgQDGfy7DRqha9ejo2mEm\nojwl44xd0ckWOTEhjoxx55rSLyRqhUNvSkgjWYMk6ACnGGEOzhWqT2c5InfOsAgR\nwkuz4d4I1hWl2YfnI3bdHeCIFtNCrvj+FLYdtahbUt0DILr1ZXt5Esc00JO0bmtE\nF7lovGhYxAWMyk1smvUY5vA6RQKBgQDB28cSpO1sVlASyXKaE/fPlikdZq+w+dKn\nlxD0ZUlNw8Hj/JURRPKCHgq+03/jbx7twLij+ApWpaLnPvNfCtoy+Cir/zt8CoQv\nQObyISVbGxrdxs2SEgc3M+fTIM4SoyYisSXiovxRSLpZF6B9hDAooL0khEVqPV/b\nLbsLN1MvywKBgQCKdFIY8aMi915DdXfIa+dKgmL5WghKURA9GOJL3UH3k9xx1IyK\nByU0Sw6X4p/57Z5dplAkYIheqPUqnUyznnQRf93RCgtFiOsrxWf2qg1gv5MSc1vI\nVogFRx2svardsKnX27Z5aCi9ZTNx6oc1ktrH/ItIR0qbvsyskZWejg9IhQKBgQCL\nYYlwTkSmcCiCWXScc17pUf2dtgb8J6Ld/C+kiG58CxOM6D4FfJ0gEJmJOmfpDiwe\npUIcImrMgaruuMQiwZrAqswTXh9Wv/jqQK/LxykkqAhZDGchbvThK+CyXBPOMp9o\nshWbLbRcfP3+sI4jsLcvfuJ/Ltr518bjv62MEussoQKBgEUaC/qS0M/Bw8zjeOUn\nW/oJGOBj78PNY5Rfm/zTTZcV31Xzw7Fm7rovGBTWgjOIminVUxDDU82VXZmfpiQ7\nrDpfYoBlrfA/2hRmq+CcrigAcQXAPiP9VG3nufuvz41YgXLu++j5azNhba935fVY\nVa6854dvYqSFktQ+tf4RIGaE\n-----END PRIVATE KEY-----\n",
+  "client_email": "storage-access@moonlit-academy-407807.iam.gserviceaccount.com",
+  "client_id": "105419201923100256272",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/storage-access%40moonlit-academy-407807.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

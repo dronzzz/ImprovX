@@ -1,4 +1,4 @@
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
+// process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 import { ValidationPipe, VersioningType } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { HttpAdapterHost, NestFactory } from '@nestjs/core';
@@ -57,10 +57,24 @@ async function bootstrap() {
   });
 
   // Cors
+  // if (corsConfig.enabled) {
+  //   app.enableCors({
+      
+  //     origin: configService.get('FRONTEND_HOST').split(',') || '' || '*',
+  //     allowedHeaders: ['content-type', ...supertokens.getAllCORSHeaders()],
+  //     credentials: true,
+  //   });
+  // }
+
   if (corsConfig.enabled) {
     app.enableCors({
-      origin: configService.get('FRONTEND_HOST').split(',') || '',
+      origin: true, // Allow your production frontend
+      //   'https://aacb-43-225-161-113.ngrok-free.app', // Allow your Ngrok URL
+      // ]
+      // ,
       allowedHeaders: ['content-type', ...supertokens.getAllCORSHeaders()],
+      // allowedHeaders: ['Content-Type', 'Authorization'], // Add any other headers you need
+      // methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
       credentials: true,
     });
   }

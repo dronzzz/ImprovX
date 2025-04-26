@@ -9,9 +9,9 @@ interface IssueLabelSuggestionProps {
 
 // Mock user assignment data
 const userAssignments = {
-  Backend: ['prashantrajnale5', 'mayankrathod255'],
-  Frontend: ['SOnu Sharma'],
-  // Design: ['user5'],
+  Backend: ['sonusharma10', 'Mayank Rathod'],
+  Frontend: ['pravinrajnale','sohamsawadhkikari8788'],
+  Design: ['pravinrajnale'],
   // Add more mappings as needed
 };
 

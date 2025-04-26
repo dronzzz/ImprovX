@@ -13,7 +13,7 @@ const logger = new LoggerService('Supertokens');
 function logEmail(email: string, link: string) {
   const message = `##### sendEmail to ${email}, subject: Login email
 
-Log in to Tegon.ai
+Log in to ImproviX
 
 Click here to log in with this magic link:
 ${link}\n\n`;
@@ -84,7 +84,7 @@ export const recipeList = (
               try {
                 await mailerService.sendMail({
                   to: email,
-                  subject: 'Login for Tegon',
+                  subject: 'Login for ImproviX',
                   template: 'loginUser',
                   context: {
                     userName: email.split('@')[0],

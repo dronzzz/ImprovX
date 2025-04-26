@@ -9,7 +9,7 @@ export function MainNav() {
 
   return (
     <div className="mr-4 hidden md:flex mt-2">
-      <Link href="/" className="mr-4 flex items-center space-x-2 lg:mr-6">
+      {/* <Link href="/" className="mr-4 flex items-center space-x-2 lg:mr-6">
         {theme === 'dark' ? (
           <Image
             src="/logo_white_text.svg"
@@ -27,7 +27,7 @@ export function MainNav() {
             height={50}
           />
         )}
-      </Link>
+      </Link> */}
       <nav className="flex items-center gap-4 lg:gap-6">
         <a
           href="https://docs.tegon.ai/actions/overview"

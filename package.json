@@ -25,6 +25,7 @@
     "@tegonhq/sdk": "^0.1.15",
     "date-fns": "^3.6.0",
     "dotenv-cli": "^7.4.4",
+    "import-in-the-middle": "^1.13.1",
     "react-day-picker": "^8.9.1",
     "turbo": "^2.0.9",
     "typescript": "5.4.3",
